@@ -1,0 +1,41 @@
+﻿@startuml
+title Conditional - Rock Ceaser Paper 
+start
+if (A==B)then(yes)
+  :Draw;
+
+elseif (A shows Rock)
+  if(B shows Ceaser)
+    :A Wins!!;
+  elseif(B shows Paper)
+    :B Wins!!
+  else
+    :Do it again;
+  endif
+
+elseif (A shows Ceaser)
+  if(B shows Rock)
+    :B Wins!!;
+  elseif(B shows Paper)
+    :A Wins!!;
+  else
+    :Do it again;
+  endif
+
+elseif (A shows Paper)
+  if(B shows Rock)
+    :A Wins!!;
+  elseif (B shows Ceaser)
+    :B Wins!!;
+  else
+  :Do it again;
+  endif
+
+endif
+
+else
+  :Do it again;
+endif
+:Game over;
+stop
+@enduml
