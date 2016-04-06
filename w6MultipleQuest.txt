@@ -1,0 +1,11 @@
+﻿@startuml
+title Repeat - Multiples of 3 and 5
+start
+repeat
+if (i is divides by 3 or 5)
+:add i to sum;
+endif
+repeat while (0<i<1000)
+:print sum;
+stop
+@enduml
