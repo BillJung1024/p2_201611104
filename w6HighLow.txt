@@ -1,0 +1,16 @@
+﻿ title HighLow
+ start 
+ :random number (1,n); 
+ :input number=num; 
+ :guess=0; 
+ if (random number > num); 
+ :guess=guess+1 
+ :print high; 
+ elseif (random number < num); 
+ :guess=guess+1 
+ :print low; 
+ elseif (random number = num); 
+ :print guess, right; 
+ endif 
+ stop 
+ @enduml 
