@@ -7,7 +7,6 @@
 	    else:
 	        d[c]=d[c]+1
         
-	%matplotlib inline 
 
 	import matplotlib
 	import matplotlib.pyplot as plt
