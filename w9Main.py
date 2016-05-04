@@ -1,70 +1,9 @@
-﻿import matplotlib
-import matplotlib.pyplot as plt
-import turtle
-wn=turtle.Screen()
+﻿import math
+Locations=tuple()
+myList=list()
 
-def charCount():
-    d=dict()
-    word=raw_input("Write a word :")
-    for c in word:
-        if c not in d:
-            d[c]=1
-        else:
-            d[c]+=1
-    plt.bar(range(len(d)),d.values(), align='center')
-    plt.xticks(range(len(d)), list(d.keys()))
-    plt.show()
-
-def countDigitsLetter(word):
-    d=dict()
-    d={"number":0, "word":0}
-    for c in word:
-        if c.isdigit()==True:
-            d["number"]+=1
-        elif c.isdigit()==False:
-            d["word"]+=1
-    
-
-    plt.bar(range(len(d)),d.values(), align='center')
-    plt.xticks(range(len(d)), list(d.keys()))
-    plt.show()
-
-def finddifference():
-    myh=set()
-    friendh=set()
-    myh{'TV', 'phone', 'camera', 'fridger', 'mixer', 'audio', 'cd player', 'light', 'computer', 'notebook', 'recorder'}
-    friendhouse={'coffee machine', 'radio', 'camera', 'running machine', 'ramp', 'computer', 'notebook', 'recorder'}
-    print myh
-    print friendh
-    difference=myh.difference(friendh)
-    print difference
-    difference2=friendh.difference(myh)
-    print difference2
-    intersection=myh.intersection(friendh)
-    print intersection
-    union=myh.union(friendh)
-    print union
-     d=dict()
-    for c in myh:
-        if c not in d:
-            d[c]=1
-        else:
-            d[c]+=1
-    for c in friendh:
-        if c not in d:
-            d[c]=1
-        else:
-            d[c]+=1
-    print d
-
-def lab9():
-    charCount()
-    word=raw_input("Write a word :")
-    countDigitsLetter(word)
-    finddifference()
-
-def main():
-    lab9()
-
-if __name__=="__main__":
-    main()
+(x1,y1)=(37.575869, 126.976637)
+Locations=[(37.576549, 126.98552), (37.571618, 126.976551), (37.574577, 126.957754)]
+for i in Locations:
+    myList.append(math.sqrt((x1-i[0])**2+(y1-i[1])**2))
+print min(myList)
