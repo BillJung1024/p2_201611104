@@ -44,7 +44,7 @@ def makeSquare(coords):
 	mypen.goto(x4,y4)
 	mypen.goto(x1,y1)
         mypen.hideturtle()
-        
+         
 makeSquare(coords)
         
      
