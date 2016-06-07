@@ -46,7 +46,7 @@ def makeSquare(coords):
         mypen.hideturtle()
         
 makeSquare(coords)
-        
+         
      
 player = turtle.Turtle()
 player.color("red")
