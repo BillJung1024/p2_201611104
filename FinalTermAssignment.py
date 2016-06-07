@@ -1,4 +1,4 @@
-﻿import turtle
+import turtle
 import math
 import random
 
@@ -36,15 +36,15 @@ def makeSquare(coords):
         x4=int(coord[3][0])
         y4=int(coord[3][1])
         mypen.penup()
-	mypen.goto(x1,y1)
-	mypen.pendown()
+        mypen.goto(x1,y1)
+        mypen.pendown()
         mypen.pensize(3)
-	mypen.goto(x2,y2)
-	mypen.goto(x3,y3)
-	mypen.goto(x4,y4)
-	mypen.goto(x1,y1)
+        mypen.goto(x2,y2)
+        mypen.goto(x3,y3)
+        mypen.goto(x4,y4)
+        mypen.goto(x1,y1)
         mypen.hideturtle()
-         
+        
 makeSquare(coords)
         
      
@@ -53,6 +53,8 @@ player.color("red")
 player.shape("triangle")
 player.penup()
 player.speed(0)
+
+score=0
 
 maxGoals = 6
 goals = []
@@ -117,3 +119,10 @@ while True:
         if isCollision(player,goals[count]):    
             goals[count].setpos(random.randint(-300,300),random.randint(-300,300))
             goals[count].right(random.randint(0,360))
+            score += 1
+            mypen.undo()
+            mypen.penup()
+            mypen.hideturtle()
+            mypen.setposition(-290,310)
+            scorestring = "Score: %s" %score
+            mypen.write(scorestring, False, align="left", font=("Arial",14, "normal"))
